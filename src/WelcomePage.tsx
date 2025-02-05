@@ -7,10 +7,7 @@ function WelcomePage() {
 
   return (
     <body>
-      <div>Test</div>
-      
-      
-      
+      <div>Welcome</div>
     </body>
   )
 }
