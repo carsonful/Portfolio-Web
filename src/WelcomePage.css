@@ -1,25 +1,35 @@
+/* Ensure the root takes up the full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0px;
+}
+
+/* Container should also take full height of the viewport */
 .welcome-container {
   display: flex;
   min-height: 100vh;
   position: relative;
   font-family: 'JetBrains Mono', monospace;
-  overflow:visible
+  overflow: hidden; /* Prevent overflow */
 }
 
 /* Blurred background */
 .welcome-container::before {
   content: '';
   position: absolute;
-  top: 0px; /* Slight overblow to prevent edges */
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('/gradient.jpg');
-  background-size: cover;
+  background-size: cover; /* Ensure it covers the area */
   background-position: center;
   background-repeat: no-repeat;
-  transform: scale(1.2); /* Increased scale to ensure full coverage */
   z-index: -1;
+  pointer-events: none; /* Prevent interaction with the background */
+  object-fit: cover; /* Ensure the image covers the area correctly */
+  background-attachment: fixed; /* Keep image fixed during scroll */
 }
 
 /* Rest of your CSS remains the same */
@@ -27,10 +37,10 @@
 .welcome-left {
   flex: 3;
   padding: 2rem;
-  border-right: 0px solid rgba(255, 255, 255, 0.3); /* Made border slightly transparent */
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2); /* Slight dark overlay */
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .welcome-left h1 {
@@ -48,7 +58,7 @@
   align-items: center;
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2); /* Slight dark overlay */
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .welcome-right h2 {
@@ -97,7 +107,7 @@
 }
 
 .btn:hover {
-  color: black; /* Text becomes black on hover */
+  color: black;
 }
 
 .btn:hover::before {
