@@ -12,9 +12,14 @@ import './ProjectPage.css'
 function ProjectPage() {
 
     return(
+        <body>
 
+            <div>
+                Hello World
+            </div>
+        
 
-        <div></div>
+        </body>
     )
 
 

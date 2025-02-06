@@ -1,0 +1,5 @@
+body {
+    background-color: rgb(113,121,126) ;
+}
+ 
+/*  <!> NOTE <!> editing the body in react components leads to overlap
