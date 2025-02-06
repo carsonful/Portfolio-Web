@@ -14,15 +14,18 @@ function WelcomePage() {
 
 
         </p>
+        <button className="btn">Contact Me</button>
+
       </div>
 
       {/* Right Section */}
       <div className="welcome-right">
         <h2>LEARN ABT ME</h2>
         <div className="button-container">
-          <button className="btn">Source</button>
+          <button className="btn">Resume</button>
           <button className="btn">GitHub</button>
-          <button className="btn">etc...</button>
+          <button className="btn">Projects</button>
+          <button className="btn">LinkedIn</button>
         </div>
       </div>
     </div>
