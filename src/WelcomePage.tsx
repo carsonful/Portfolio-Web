@@ -1,6 +1,18 @@
 import './WelcomePage.css';
-
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from './actions/constants/defined';
+import { handleClick } from './actions/buttonClicks';
 function WelcomePage() {
+
+
+  const navigate = useNavigate();
+
+
+
+
+
+
+
   return (
     <div className="welcome-container">
       {/* Left Section */}
@@ -14,7 +26,7 @@ function WelcomePage() {
 
 
         </p>
-        <button className="btn">Contact Me</button>
+        <button className="btn" onClick={handleClick(navigate, ROUTES.CONTACT)}>Contact Me</button>
 
       </div>
 
@@ -22,10 +34,10 @@ function WelcomePage() {
       <div className="welcome-right">
         <h2>LEARN ABT ME</h2>
         <div className="button-container">
-          <button className="btn">Resume</button>
-          <button className="btn">GitHub</button>
-          <button className="btn">Projects</button>
-          <button className="btn">LinkedIn</button>
+          <button className="btn" onClick={handleClick(navigate, ROUTES.RESUME)}>Resume</button>
+          <button className="btn" onClick={handleClick(navigate, ROUTES.GITHUB)}>GitHub</button>
+          <button className="btn" onClick={handleClick(navigate, ROUTES.PROJECTS)}>Projects</button>
+          <button className="btn" onClick={handleClick(navigate, ROUTES.LINKEDIN)}>LinkedIn</button>
         </div>
       </div>
     </div>
