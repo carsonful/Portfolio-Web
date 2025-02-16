@@ -32,8 +32,6 @@ html, body {
   background-attachment: fixed; /* Keep image fixed during scroll */
 }
 
-/* Rest of your CSS remains the same */
-
 .welcome-left {
   flex: 3;
   padding: 2rem;
@@ -41,6 +39,8 @@ html, body {
   position: relative;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 .welcome-left h1 {
@@ -77,8 +77,10 @@ html, body {
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.9rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text */
+  padding: 0.9rem 1.5rem;
   font-size: 16px;
   font-weight: 700;
   color: white;
@@ -91,6 +93,8 @@ html, body {
   z-index: 1;
   font-family: inherit;
   transition: color 0.3s ease;
+  width: 100%;
+  justify-content: center;
 }
 
 .btn::before {
@@ -119,4 +123,59 @@ html, body {
   line-height: 1.6;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+}
+
+.icon {
+  z-index: 2;
+  transition: stroke 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn:hover .icon {
+  stroke: #000;
+}
+
+/* Make the button in the left section match the others but with proper alignment */
+.welcome-left .btn {
+  align-self: flex-start;
+  width: auto;
+}
+
+@media(max-width: 768px) {
+  .welcome-container {
+    flex-direction: column;
+  }
+  
+  .welcome-left {
+    flex: 1;
+    padding: 1rem;
+    border-right: none;
+  }
+
+  .welcome-right {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .welcome-left h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .button-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+  
+  .welcome-left .btn {
+    width: 100%;
+  }
 }
