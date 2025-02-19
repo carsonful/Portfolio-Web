@@ -15,15 +15,15 @@ body, html
 }
 
 :root {
-    --color-primary: hsl(223, 50%, 90%);
-    --color-secondary: hsl(223, 50%, 10%);
-    --color-tertiary: hsl(283, 80%, 20%);
-    --color-accent: hsl(163, 80%, 20%);
+    --color-primary: hsl(45, 20%, 97%);     /* Warm white background */
+    --color-secondary: hsl(340, 25%, 25%);  /* Deep rose text */
+    --color-tertiary: hsl(25, 85%, 55%);    /* Sunset orange accent */
+    --color-accent: hsl(320, 60%, 45%);     /* Rich pink accent */
 }
 
 .dark {
-    --color-primary: hsl(223, 50%, 10%);
-    --color-secondary: hsl(223, 50%, 90%);
-    --color-tertiary: hsl(283, 80%, 80%);
-    --color-accent: hsl(163, 80%, 80%);
+    --color-primary: hsl(340, 25%, 15%);    /* Deep rose background */
+    --color-secondary: hsl(45, 20%, 90%);   /* Warm white text */
+    --color-tertiary: hsl(25, 85%, 75%);    /* Light orange accent */
+    --color-accent: hsl(320, 60%, 65%);     /* Light pink accent */
 }

@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import Welcome from './sections/Welcome/Welcome';
 import Navbar from './components/Navbar/Navbar';
+import About from './sections/About/About';
+
+
+
+
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -17,6 +22,7 @@ const App: React.FC = () => {
     <Navbar />
     <main>
     <Welcome />
+    <About />
     </main>
     </div>
   );
