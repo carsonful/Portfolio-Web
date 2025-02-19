@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+body, html 
+{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    min-height: 100vh;
+}
+
+:root {
+    --color-primary: hsl(223, 50%, 90%);
+    --color-secondary: hsl(223, 50%, 10%);
+    --color-tertiary: hsl(283, 80%, 20%);
+    --color-accent: hsl(163, 80%, 20%);
+}
+
+.dark {
+    --color-primary: hsl(223, 50%, 10%);
+    --color-secondary: hsl(223, 50%, 90%);
+    --color-tertiary: hsl(283, 80%, 80%);
+    --color-accent: hsl(163, 80%, 80%);
+}
