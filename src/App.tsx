@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import Welcome from './sections/Welcome/Welcome';
 import Navbar from './components/Navbar/Navbar';
 import About from './sections/About/About';
-
-
+import Projects from './sections/Projects/Projects';
+import Contact from './sections/Contact/Contact';
 
 
 const App: React.FC = () => {
@@ -23,6 +23,8 @@ const App: React.FC = () => {
     <main>
     <Welcome />
     <About />
+    <Projects />
+    <Contact />
     </main>
     </div>
   );

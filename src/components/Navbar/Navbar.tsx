@@ -40,8 +40,8 @@ const Navbar: React.FC = () => {
         <div className="nav-links">
           <button onClick={() => scrollToSection('welcome-section')}>Welcome</button>
           <button onClick={() => scrollToSection('about-section')}>About Me</button>
-          <button onClick={() => scrollToSection('projects')}>Projects</button>
-          <button onClick={() => scrollToSection('contact')}>Contact Me</button>
+          <button onClick={() => scrollToSection('projects-section')}>Projects</button>
+          <button onClick={() => scrollToSection('contact-section')}>Contact Me</button>
         </div>
       </nav>
 
