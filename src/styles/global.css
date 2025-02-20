@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+body, html 
+{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    min-height: 100vh;
+}
+
+:root {
+    --color-primary: hsl(45, 20%, 97%);     /* Warm white background */
+    --color-secondary: hsl(340, 25%, 25%);  /* Deep rose text */
+    --color-tertiary: hsl(25, 85%, 55%);    /* Sunset orange accent */
+    --color-accent: hsl(320, 60%, 45%);     /* Rich pink accent */
+}
+
+.dark {
+    --color-primary: hsl(340, 25%, 15%);    /* Deep rose background */
+    --color-secondary: hsl(45, 20%, 90%);   /* Warm white text */
+    --color-tertiary: hsl(25, 85%, 75%);    /* Light orange accent */
+    --color-accent: hsl(320, 60%, 65%);     /* Light pink accent */
+}

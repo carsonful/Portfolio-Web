@@ -1,0 +1,51 @@
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 2rem;
+}
+
+.about-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.about-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+.year-Highlight {
+    color: var(--color-tertiary);
+}
+
+
+.resume-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    color: var(--color-tertiary);
+    border: 2px solid var(--color-tertiary);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+}

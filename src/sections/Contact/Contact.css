@@ -1,0 +1,106 @@
+.contact-section {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+.contact-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-tertiary);
+    border-radius: 0.5rem;
+    color: var(--color-tertiary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-link:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+}
+
+.contact-link .material-icons {
+    font-size: 1.5rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 2px solid var(--color-tertiary);
+    border-radius: 0.75rem;
+    color: var(--color-tertiary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 250px;
+}
+
+.contact-link div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.link-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.link-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}

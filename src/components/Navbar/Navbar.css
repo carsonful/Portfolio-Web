@@ -1,0 +1,96 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.navbar.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links button:hover {
+  color: var(--color-tertiary);
+}
+
+.sticky-home {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.sticky-home.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sticky-home .material-icons {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sticky-home .material-icons:hover {
+  color: var(--color-tertiary);
+  transform: scale(1.1);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.theme-toggle .material-icons {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle .material-icons:hover {
+  color: var(--color-tertiary);
+  transform: scale(1.1);
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}

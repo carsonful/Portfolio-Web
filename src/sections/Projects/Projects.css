@@ -1,0 +1,119 @@
+.projects-section {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.projects-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 3rem;
+}
+
+.projects-description {
+    max-width: 48rem;
+    margin-bottom: 3rem;
+}
+
+.projects-description > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+.project-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-category {
+    padding: 1.5rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.project-category:hover {
+    transform: translateX(10px);
+    border-color: var(--color-tertiary);
+}
+
+.project-category h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.project-category p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-secondary);
+}
+
+.projects-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;  /* Increased padding */
+    font-size: 1.2rem;     /* Larger font size */
+    color: var(--color-tertiary);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;      /* Added font weight */
+    border: 2px solid var(--color-tertiary);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+
+.projects-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-tertiary);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.projects-button:hover {
+    color: var(--color-primary);
+}
+
+.projects-button:hover::before {
+    width: 100%;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.project-category {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.project-category:nth-child(1) { animation-delay: 0.1s; }
+.project-category:nth-child(2) { animation-delay: 0.2s; }
+.project-category:nth-child(3) { animation-delay: 0.3s; }
