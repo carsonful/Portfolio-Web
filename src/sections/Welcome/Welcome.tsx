@@ -1,4 +1,3 @@
-import React from 'react';
 import './Welcome.css';
 
 const Welcome = () => {
@@ -20,6 +19,8 @@ const Welcome = () => {
 
   return (
     <section className="welcome-section">
+
+
         <div className ="welcome-content">
             <h1 className ="welcome-title">
                 Welcome, I'm{' '}

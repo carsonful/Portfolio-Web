@@ -17,6 +17,22 @@ const About = () => {
             Collaborating with others is something I value, as it often leads to innovative solutions and fresh perspectives.
 
           </p>
+
+          <div className = "resume-container">
+            <a 
+              href="/Carson_Fulmer_Resume.pdf" 
+              className="resume-button" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              View Resume 
+            </a>
+
+
+
+
+          </div>
+
         </div>
 
         {/* Placeholder for additional sections */}
