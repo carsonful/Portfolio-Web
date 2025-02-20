@@ -64,9 +64,7 @@ const ProjectsPage: React.FC = () => {
         {displayedProjects.map((project) => (
           <div key={project.id} className="project-card">
             <h2 className="project-title">{project.title}</h2>
-            <div className="project-category">
-              <span className="category-tag">{project.category}</span>
-            </div>
+
             <p className="project-description">{project.description}</p>
             
             <div className="project-tech">

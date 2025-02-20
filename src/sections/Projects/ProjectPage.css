@@ -27,8 +27,10 @@
 .projects-filters {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap;        /* This makes buttons wrap to new rows when needed */
+    gap: 1rem;              /* Consistent spacing between buttons */
     margin-bottom: 3rem;
+    padding: 0 1rem;        /* Add some padding on sides */
 }
 
 .filter-btn {
@@ -40,6 +42,7 @@
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin: 0.25rem;        /* Optional: add some margin for better spacing when wrapped */
 }
 
 .filter-btn:hover, .filter-btn.active {
@@ -120,3 +123,5 @@
 .project-link .material-icons {
     font-size: 1.25rem;
 }
+
+
