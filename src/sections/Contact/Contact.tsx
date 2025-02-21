@@ -10,8 +10,7 @@ const Contact = () => {
         <div className="contact-description">
     <p>
         I'm currently searching for new opportunities and developers to collaborate with. 
-        Whether you have a project in mind, a question about my work, 
-        or just want to connect, feel free to reach out!
+        If you have something in mind or just want to reach me, see below!
     </p>
 </div>
 

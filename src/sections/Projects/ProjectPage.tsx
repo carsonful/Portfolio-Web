@@ -26,7 +26,8 @@ const ProjectsPage: React.FC = () => {
       category: ["Personal"],
       tech: ["React", "TypeScript", "Node.js", "C++"],
       links: {
-        github: "https://github.com/carsonful/World-Disease-Analysis",      }
+        github: "https://github.com/carsonful/World-Disease-Analysis",
+      }
     },
     {
       id: 2,
@@ -51,7 +52,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 4,
       title: "Portfolio Website",
-      description: "What you're looking at rightn now is my portfolio website! I built this site to showcase my projects and skills as a developer.",
+      description: "What you're looking at right now is my portfolio website! I built this site to showcase my projects and skills as a developer.",
       category: ["Personal"],
       tech: ["React", "TypeScript", "Node.js", "Netlify", "GitHub Actions"],
       links: {
