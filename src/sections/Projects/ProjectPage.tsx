@@ -2,33 +2,80 @@ import React, { useState } from 'react';
 import './ProjectPage.css';
 
 type ProjectCategory = 'Personal' | 'Collaborative' | 'Research' | 'All';
+type ProjectCategoryWithoutAll = Exclude<ProjectCategory, 'All'>;
 
 interface Project {
   id: number;
   title: string;
   description: string;
-  category: Exclude<ProjectCategory, 'All'>;
+  category: ProjectCategoryWithoutAll[];
   tech: string[];
   links: {
     github: string;
-    live?: string;
   };
 }
 
 const ProjectsPage: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>('All');
 
-  // Sample project data
   const projects: Project[] = [
     {
       id: 1,
-      title: "Project Name",
-      description: "Detailed description of the project goes here. Explain what the project does, why you built it, and what technologies you used.",
-      category: "Personal",
-      tech: ["React", "TypeScript", "Node.js"],
+      title: "Global Health Analysis",
+      description: "Global Health Analysis is a tool to compare populations affected by certain diseases over the past 24 years. The different type of diseases include Alzheimer's, Asthma, COVID-19, Cancer, Cholera, Dengue, Diabetes, Ebola, HIV/AIDS, Hepatitis, Hypertension, Influenza, Leprosy, Malaria, Measles, Parkinson's, Polio, Rabies, Tuberculosis, Zika.",
+      category: ["Personal"],
+      tech: ["React", "TypeScript", "Node.js", "C++"],
+      links: {
+        github: "https://github.com/carsonful/World-Disease-Analysis",      }
+    },
+    {
+      id: 2,
+      title: "Starcrosser",
+      description: "The size and properties of interstellar space are often incorrectly perceived or understood, as a result of our struggle with comprehending extremely large or small things. Our goal is to build a program that helps users visualize extremely large distances in space, particularly between observed star systems.",
+      category: ["Research", "Collaborative"],
+      tech: ["C++", "QTCreator"],
+      links: {
+        github: "https://github.com/carsonful/Starcrosser",
+      }
+    },
+    {
+      id: 3,
+      title: "Canvas Calendar",
+      description: "This program allows for users to acquire their To-Do Assignments on Canvas and have a message be sent through SMS as well as giving the weather, and a motivational quote. This program does not run on it's own. I suggest using a crontab on a VM to achieve equivalent output.",
+      category: ["Personal"],
+      tech: ["Python", "CanvasAPI", "Google Cloud Platform"],
+      links: {
+        github: "https://github.com/carsonful/canvascalendar",
+      }
+    },
+    {
+      id: 4,
+      title: "Portfolio Website",
+      description: "What you're looking at rightn now is my portfolio website! I built this site to showcase my projects and skills as a developer.",
+      category: ["Personal"],
+      tech: ["React", "TypeScript", "Node.js", "Netlify", "GitHub Actions"],
+      links: {
+        github: "https://github.com/carsonful/Portfolio-Web",
+      }
+    },
+    {
+      id: 5,
+      title: "Concurrent Game of Life (WIP)",
+      description: "Ponylang is an actor and object oriented language that excels in leveraging its inherent concurrent model of execution. Implementing clean code, in case of needing to scale up our design.",
+      category: ["Research", "Collaborative"],
+      tech: ["PonyLang", "Concurrent Programming"],
       links: {
         github: "https://github.com/username/project",
-        live: "https://project-demo.com"
+      }
+    },
+    {
+      id: 7,
+      title: "Class Playlist Generator",
+      description: "This program allows a user to read a discussion in canvas, and retrieve its entries, a discussion with replies of song names will be broken up into a list and searched by the spotify api, this is then added to the playlist, it does not allow duplicate songs to be added",
+      category: ["Personal"],
+      tech: ["Python", "SpotifyAPI", "CanvasAPI"],
+      links: {
+        github: "https://github.com/carsonful/Class-Playlist-Maker",
       }
     },
     // Add more projects here
@@ -36,7 +83,7 @@ const ProjectsPage: React.FC = () => {
 
   const filterProjects = (projects: Project[], filter: ProjectCategory) => {
     if (filter === 'All') return projects;
-    return projects.filter(project => project.category === filter);
+    return projects.filter(project => project.category.includes(filter));
   };
 
   const displayedProjects = filterProjects(projects, activeFilter);
@@ -83,17 +130,6 @@ const ProjectsPage: React.FC = () => {
                 <span className="material-icons">code</span>
                 View Code
               </a>
-              {project.links.live && (
-                <a 
-                  href={project.links.live} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  <span className="material-icons">launch</span>
-                  Live Demo
-                </a>
-              )}
             </div>
           </div>
         ))}
