@@ -40,7 +40,7 @@
 .project-category {
     padding: 1.5rem;
     border: 2px solid var(--color-secondary);
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     transition: all 0.3s ease;
 }
 
