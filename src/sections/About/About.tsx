@@ -11,7 +11,7 @@ const About = () => {
           <p>
             I'm Carson Fulmer, a <span className="year-Highlight">Computer Science </span> 
             undergraduate studying at the <span className="year-Highlight">University of Florida</span> set to graduate in
-            <span className="year-Highlight"> May</span>.
+            <span className="year-Highlight"> May</span>
             . I have a passion for software development and a keen interest in rising tech.
             I enjoy working on projects that challenge my skills and allow me to learn new solutions to problems.
             Collaborating with others is something I value, as it often leads to innovative solutions and fresh perspectives.
